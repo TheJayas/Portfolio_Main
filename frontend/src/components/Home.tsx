@@ -13,12 +13,12 @@ const Home = () => {
       <div className=" w-3/5 h-screen flex flex-col pt-40 pb-20">
         <div className="w-full h-2/5 flex flex-col space-y-6  justify-center">
           <h1 className="text-1xl text-yellow-500 font-mono">Web-App Expert</h1>  
-          <h1 className="text-2xl text-zinc-300 font-sans">Hi There, I am Shivam Jasiwal</h1>  
+          <h1 className="text-2xl text-zinc-300 font-sans">Hi There, I am Shivam Jaiswal</h1>  
           <TypeAnimation className="text-zinc-100 font-serif text-6xl flex item-center"
             sequence={[
               'I am a full-stack Developer',1000, 
               'I am specialized in developing Web-Apps',1000,
-              'I am also a Open-source Contributor.',1000
+              'I am also an Open-source Contributor.',1000
             ]}
             wrapper="span"
             speed={50}
