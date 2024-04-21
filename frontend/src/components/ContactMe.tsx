@@ -1,4 +1,8 @@
-import { BackgroundGradientAnimation } from "./ui/background-gradient-animation"
+import {useState} from "react";
+import {  motion } from "framer-motion";
+import { HomeIcon, Menu, Phone, ShoppingBagIcon, User2 } from 'lucide-react';
+import { useNavigate } from "react-router-dom";
+
 import { Card, CardContent, CardHeader, CardTitle } from "../../@/components/ui/card";
 import { Button } from "../../@/components/ui/button"
 import {
@@ -14,6 +18,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { Loader2 } from "lucide-react";
+import { Vortex } from "./ui/vortex";
  
 const formSchema = z.object({
   username: z.string().min(2, {
@@ -28,6 +33,8 @@ const formSchema = z.object({
 })
  
 const ContactMe = () => {
+    const navigate=useNavigate();
+  const [showDiv,setShowDiv]=useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -37,9 +44,16 @@ const ContactMe = () => {
     },
   })
   return (
-    <BackgroundGradientAnimation>
-      <div className="h-screen w-screen z-10 flex felx-col pt-32 container pl-32 bg-grey-200">
-        <Card className="mx-auto max-w-[500px] z-40 border-2 border-zinc-400 rounded-3xl px-16 flex flex-col justify-center">
+    <Vortex>
+        <motion.div
+          initial={{rotateZ:0}}
+          animate={{rotateZ:showDiv ? 90 : 0}}
+          transition={{duration:0.1}}
+        className='h-10 w-10 bg-sky-400 flex flex-row fixed top-6 left-3 items-center justify-center rounded z-20'>
+          <Menu className='bg-[#ededf4] p-[2px] border-zinc-900 rounded h-7 w-7 cursor-pointer z-10' onClick={()=>{setShowDiv(!showDiv)}}/>
+        </motion.div>
+      <div className="h-screen w-full z-10 flex felx-col container bg-grey-200 items-center justify-center overflow-y-scroll">
+        <Card className="mx-auto max-w-[500px] z-40 border-2 border-zinc-400 rounded-3xl px-16 flex flex-col justify-center h-[30rem] max-h-screen bg-black bg-opacity-50 py-10">
           <CardHeader>
               <CardTitle>
                   <h2 className="font-semibold text-zinc-300 text-5xl pb-5">Contact Me</h2>
@@ -58,7 +72,7 @@ const ContactMe = () => {
                             <FormItem>
                                 <FormLabel className="text-zinc-300 ">Username</FormLabel>
                                 <FormControl>
-                                    <Input className="rounded-xl p-2 flex flex-row item-center justify-center h-10 bg-transparent border-zinc-800 border-2 font-mono text-white"
+                                    <Input className="rounded-xl p-2 flex flex-row item-center justify-center h-10 bg-transparent border-zinc-300 border-2 font-mono text-white"
                                         placeholder="John Doe"
                                         {...field}
                                     />
@@ -74,7 +88,7 @@ const ContactMe = () => {
                             <FormItem>
                                 <FormLabel className="text-zinc-300 ">Email</FormLabel>
                                 <FormControl>
-                                    <Input className="text-white rounded-xl p-2 flex flex-row item-center justify-center h-10 bg-transparent border-zinc-800 border-2 font-mono"
+                                    <Input className="text-white rounded-xl p-2 flex flex-row item-center justify-center h-10 bg-transparent border-zinc-300 border-2 font-mono"
                                         placeholder="john@gmail.com"
                                         {...field}
                                     />
@@ -90,7 +104,7 @@ const ContactMe = () => {
                             <FormItem>
                                 <FormLabel className="text-zinc-300 ">Message</FormLabel>
                                 <FormControl>
-                                    <Input className="text-white rounded-xl p-2 flex flex-row item-center justify-center h-10 bg-transparent border-zinc-800 border-2 font-mono"
+                                    <Input className="text-white rounded-xl p-2 flex flex-row item-center justify-center h-10 bg-transparent border-zinc-300 border-2 font-mono"
                                         placeholder="Type your message here"
                                         {...field}
                                     />
@@ -121,7 +135,17 @@ const ContactMe = () => {
             </CardContent>
             </Card>
           </div>
-     </BackgroundGradientAnimation>
+        <motion.div className='w-10 rounded-b z-10 top-[50px] left-3 fixed flex flex-col bg-sky-400 pt-2 items-center justify-evenly' 
+            initial={{ height: 0 }}
+            animate={{ height: showDiv ? screen.height*2/6 : 0}}
+            transition={{ duration: 0.1}}
+            >
+            <HomeIcon className=' cursor-pointer hover:bg-[#D6D6D6] rounded p-1 bg-[#ededf4] h-8 w-8' style={{display:showDiv?'block':'contents'}} onClick={()=>{navigate('/')}}/>
+            <ShoppingBagIcon className=' cursor-pointer hover:bg-[#D6D6D6] rounded p-1 bg-[#ededf4] h-8 w-8' style={{display:showDiv?'block':'contents'}} onClick={()=>{navigate('/projects')}}/>
+            <User2 className=' cursor-pointer hover:bg-[#D6D6D6] rounded p-1 bg-[#ededf4] h-8 w-8' style={{display:showDiv?'block':'contents'}} onClick={()=>{navigate('/about')}}/>
+            <Phone className=' cursor-pointer hover:bg-emerald-400 rounded p-1 bg-emerald-300 h-8 w-8' style={{display:showDiv?'block':'contents'}} onClick={()=>{navigate('/contact')}}/>
+        </motion.div>
+     </Vortex>
   )
 }
 
