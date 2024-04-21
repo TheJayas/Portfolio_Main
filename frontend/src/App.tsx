@@ -26,10 +26,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout/>}>
           <Route index element={<Home/>} />
-          <Route path="/about" element={<AboutMe/>} />
           <Route path="/projects" element={<Projects/>} />
           <Route path="/contact" element={<ContactMe/>} />
         </Route>
+        <Route path="/about" element={<AboutMe/>} />
       </Routes>
    </BrowserRouter>
   )
