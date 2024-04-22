@@ -84,13 +84,13 @@ const AboutMe = () => {
   ];
   return (
     <div className='overflow-x-hidden'>
-        <motion.div
-          initial={{rotateZ:0}}
-          animate={{rotateZ:showDiv ? 90 : 0}}
-          transition={{duration:0.1}}
-        className='h-10 w-10 bg-sky-400 flex flex-row fixed top-6 left-3 items-center justify-center rounded z-20'>
-          <Menu className='bg-[#ededf4] p-[2px] border-zinc-900 rounded h-7 w-7 cursor-pointer z-10' onClick={()=>{setShowDiv(!showDiv)}}/>
-        </motion.div>
+      <motion.div
+        initial={{rotateZ:0}}
+        animate={{rotateZ:showDiv ? 90 : 0}}
+        transition={{duration:0.1}}
+      className='h-10 w-10 bg-sky-400 flex flex-row fixed top-6 left-3 items-center justify-center rounded z-20'>
+        <Menu className='bg-[#ededf4] p-[2px] border-zinc-900 rounded h-7 w-7 cursor-pointer z-10' onClick={()=>{setShowDiv(!showDiv)}}/>
+      </motion.div>
      <div className='bg-black h-full w-full flex flex-col items-center justify-center overflow-y-hidden'>
         <h1 className="mx-auto max-w-5xl px-8 pb-8 pt-12 text-2xl font-bold text-white md:pt-12 md:text-5xl items-start">
             About Me

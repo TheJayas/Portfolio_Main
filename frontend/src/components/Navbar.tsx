@@ -4,11 +4,11 @@
 
 const Navbar = () => {
   return (
-    <div className="h-14 border-gray-200 border-2 justify-center flex flex-col rounded-full fixed mt-8 z-10 bg-black" style={{width:'800px',left:'50%', marginLeft:'-400px'}}>
+    <div className="h-14 border-gray-200 border-2 justify-center pr-4 flex-col rounded-full fixed mt-8 z-10 bg-black md:flex hidden" style={{width:'700px',left:'50%', marginLeft:'-350px'}}>
       <div className="flex flex-row justify-around divide-x-2 divide-slate-200">
         <div className="mx-2 w-1/4 flex flex-row justify-center"><a href="/"><h1 className="font-mono hover:animate-pulse hover:text-emerald-300">HOME</h1></a></div>
-        <div className="mx-2 w-1/4 flex flex-row justify-center"><a href="/about"><h1 className="font-mono hover:animate-pulse hover:text-emerald-300">ABOUT ME</h1></a></div>
         <div className="mx-2 w-1/4 flex flex-row justify-center"><a href="/projects"><h1 className="font-mono hover:animate-pulse hover:text-emerald-300">PROJECTS</h1></a></div>
+        <div className="mx-2 w-1/4 flex flex-row justify-center"><a href="/about"><h1 className="font-mono hover:animate-pulse hover:text-emerald-300">ABOUT</h1></a></div>
         <div className="mx-2 w-1/4 flex flex-row justify-center"><a href="/contact"><h1 className="font-mono hover:animate-pulse hover:text-emerald-300">CONTACT ME</h1></a></div>
       </div>
     </div>   
