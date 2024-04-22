@@ -10,9 +10,9 @@ interface State {
 
 function SplashMessage(): ReactNode {
   return (
-    <div className='z-10 bg-black fixed w-lvw'>
+    <div className='z-10 bg-black fixed w-lvw h-screen'>
       <div className='splash'>
-        <h1>
+        <h1 className='flex flex-col mb-28'>
         <span className="word">Shivam<span className="superscript">s</span><span className="superscript">J</span></span>
         <span className="word">Jaiswal</span>
         </h1>

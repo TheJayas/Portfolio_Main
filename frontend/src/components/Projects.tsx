@@ -34,8 +34,9 @@ export const Projects = () => {
   return (
     <div className="h-[190rem] bg-black flex flex-col w-full overflow-x-hidden">
       <div className="h-40 w-screen item-center justify-center flex flex-row overflow-x-hidden">
-        <TypewriterEffectSmooth words={words} className='items-center bg-black'/>
+        <TypewriterEffectSmooth words={words} className='items-center'/>
       </div>
+
       <div>
         <HeroParallax products={projects}/>
       </div>

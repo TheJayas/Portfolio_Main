@@ -53,7 +53,7 @@ const ContactMe = () => {
           <Menu className='bg-[#ededf4] p-[2px] border-zinc-900 rounded h-7 w-7 cursor-pointer z-10' onClick={()=>{setShowDiv(!showDiv)}}/>
         </motion.div>
       <div className="h-screen w-full z-10 flex felx-col container bg-grey-200 items-center justify-center overflow-y-scroll">
-        <Card className="mx-auto max-w-[500px] z-40 border-2 border-zinc-400 rounded-3xl px-16 flex flex-col justify-center h-[30rem] max-h-screen bg-black bg-opacity-50 py-10">
+        <Card className="mx-auto max-w-[500px] z-40 border-2 border-zinc-400 rounded-3xl px-16 flex flex-col justify-center h-[30rem] max-h-screen bg-black bg-opacity-50 py-10 overflow-x-hidden overflow-y-hidden">
           <CardHeader>
               <CardTitle>
                   <h2 className="font-semibold text-zinc-300 text-5xl pb-5">Contact Me</h2>

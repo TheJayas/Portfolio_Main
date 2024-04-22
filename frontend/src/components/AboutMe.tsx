@@ -190,10 +190,10 @@ const AboutMe = () => {
             />
         </Card>
         </div>
-        <h1 className="mx-auto max-w-5xl px-8 pb-8 pt-2 text-2xl font-bold text-sky-300 md:text-4xl pl-16">
-            Experience
+        <h1 className="mx-auto max-w-5xl px-8 pb-8 pt-2 text-3xl font-bold text-sky-300 md:text-4xl pl-16">
+            Projects
         </h1>
-        <div className="mx-auto max-w-2xl py-40 text-white antialiased  pt-2  ">
+        <div className="mx-auto max-w-2xl py-40 text-white antialiased pt-2 sm:pl-8 md:pl-2 pl-10">
         {Project_list.map((project, i) => (
           <div key={`content-${i}`} className="mb-10 mt-4 md:mt-0">
             <div className="flex flex-row space-x-4 items-start">

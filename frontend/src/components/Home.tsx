@@ -15,11 +15,11 @@ const Home = () => {
   const [showDiv,setShowDiv]=useState(false);
   return (
     <BackgroundGradientAnimation>
-    <div className=" w-lvw h-screen flex flex-row justify-evenly items-center px-12 gap-x-10">
-      <div className=" lg:w-3/5 md:w-screen h-screen flex flex-col pt-40 pb-20">
-        <div className="w-full h-2/5 flex flex-col space-y-6  justify-center">
-          <h1 className="text-1xl text-yellow-500 font-mono">Web-App Expert</h1>  
-          <h1 className="text-2xl text-zinc-300 font-sans">Hi There, I am Shivam Jaiswal</h1>  
+    <div className=" w-lvw h-screen flex flex-row justify-evenly items-center sm:px-12 px-4 gap-x-10">
+      <div className=" lg:w-3/5 md:w-screen h-screen flex flex-col pt-40 pb-20 pr-10">
+        <div className="sm:w-full w-lvw h-2/5 flex flex-col space-y-6 justify-center">
+          <h1 className="text-2xl text-yellow-500 font-mono">Web-App Expert</h1>  
+          <h1 className="text-3xl text-zinc-300 font-sans">Hi There, I am Shivam Jaiswal</h1>  
           <TypeAnimation className="text-zinc-100 font-serif text-6xl flex item-center space-y-10"
             sequence={[
               'I am a full-stack Developer',1000, 
@@ -28,22 +28,28 @@ const Home = () => {
             ]}
             wrapper="span"
             speed={50}
-            style={{ fontSize: '2em', display: 'flex', margin:'2' }}
+            style={{ fontSize: '2em', display: 'flex' , inlineSize:'fit-content', paddingBottom:'10px' }}
             repeat={Infinity}
           />
         </div>
         <div className="h-1/5"></div>
-        <div className="w-full h-2/5 flex flex-row space-x-4 items-center z-30">
-          <a href="https://github.com/TheJayas"><IconBrandGithub size={50} color="white" className="hover:animate-bounce"/></a>
-          <a href="https://www.linkedin.com/in/shivam-jaiswal-54088a266/"><IconBrandLinkedin size={50} color="white" className="hover:animate-bounce"/></a>
-          <a href="mailto:shivam181106@gmail.com"><IconMail size={50} color="white" className="hover:animate-bounce"/></a>
-          <a href="http://localhost:5173/contact" className="flex flex-row items-center justify-center hover:animate-none">
-          <TextGenerateEffect words="Contact Me"/>
-          <IconArrowBadgeRight size={50} color="white" className="hover:animate-bounce"/>
+        <div className="flex flex-col justify-start sm:pl-0 pl-12">
+          <div className="w-full max-w-screen h-2/5 flex flex-row space-x-4 items-center z-30 sm:justify-start sm:mb-0 mb-10">
+            <a href="https://github.com/TheJayas"><IconBrandGithub size={50} color="white" className="hover:animate-bounce"/></a>
+            <a href="https://www.linkedin.com/in/shivam-jaiswal-54088a266/"><IconBrandLinkedin size={50} color="white" className="hover:animate-bounce"/></a>
+            <a href="mailto:shivam181106@gmail.com"><IconMail size={50} color="white" className="hover:animate-bounce"/></a>
+            <a href="http://localhost:5173/contact" className="flex-row items-center justify-center hover:animate-none sm:flex hidden ">
+            <TextGenerateEffect words="Contact Me"/>
+            <IconArrowBadgeRight size={50} color="white" className="hover:animate-bounce"/>
+            </a>
+          </div>
+          <a href="http://localhost:5173/contact" className="flex-row items-center justify-start hover:animate-none sm:hidden flex ">
+            <TextGenerateEffect words="Contact Me"/>
+            <IconArrowBadgeRight size={50} color="white" className="hover:animate-bounce"/>
           </a>
         </div>
       </div>
-    <img className=" w-1/5 h-2/5 mt-12 rounded-2xl hidden lg:flex" src={img1}/>
+    <img className="w-80 h-80 mt-12 rounded-2xl hidden lg:flex" src={img1}/>
     </div>
     <motion.div
         initial={{rotateZ:0}}
@@ -57,8 +63,8 @@ const Home = () => {
       animate={{ height: showDiv ? screen.height*2/6 : 0}}
       transition={{ duration: 0.1}}
       >
-        <HomeIcon className=' cursor-pointer hover:bg-[#D6D6D6] rounded p-1 bg-[#ededf4] h-8 w-8' style={{display:showDiv?'block':'contents'}} onClick={()=>{navigate('/')}}/>
-        <ShoppingBagIcon className=' cursor-pointer hover:bg-emerald-400 rounded p-1 bg-emerald-300 h-8 w-8' style={{display:showDiv?'block':'contents'}} onClick={()=>{navigate('/projects')}}/>
+        <HomeIcon className=' cursor-pointer hover:bg-emerald-400 rounded p-1 bg-emerald-300 h-8 w-8' style={{display:showDiv?'block':'contents'}} onClick={()=>{navigate('/')}}/>
+        <ShoppingBagIcon className=' cursor-pointer hover:bg-[#D6D6D6] rounded p-1 bg-[#ededf4] h-8 w-8' style={{display:showDiv?'block':'contents'}} onClick={()=>{navigate('/projects')}}/>
         <User2 className=' cursor-pointer hover:bg-[#D6D6D6] rounded p-1 bg-[#ededf4] h-8 w-8' style={{display:showDiv?'block':'contents'}} onClick={()=>{navigate('/about')}}/>
         <Phone className=' cursor-pointer hover:bg-[#D6D6D6] rounded p-1 bg-[#ededf4] h-8 w-8' style={{display:showDiv?'block':'contents'}} onClick={()=>{navigate('/contact')}}/>
       </motion.div>
