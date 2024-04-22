@@ -38,12 +38,12 @@ const Home = () => {
             <a href="https://github.com/TheJayas"><IconBrandGithub size={50} color="white" className="hover:animate-bounce"/></a>
             <a href="https://www.linkedin.com/in/shivam-jaiswal-54088a266/"><IconBrandLinkedin size={50} color="white" className="hover:animate-bounce"/></a>
             <a href="mailto:shivam181106@gmail.com"><IconMail size={50} color="white" className="hover:animate-bounce"/></a>
-            <a href="http://localhost:5173/contact" className="flex-row items-center justify-center hover:animate-none sm:flex hidden ">
+            <a href="/contact" className="flex-row items-center justify-center hover:animate-none sm:flex hidden ">
             <TextGenerateEffect words="Contact Me"/>
             <IconArrowBadgeRight size={50} color="white" className="hover:animate-bounce"/>
             </a>
           </div>
-          <a href="http://localhost:5173/contact" className="flex-row items-center justify-start hover:animate-none sm:hidden flex ">
+          <a href="/contact" className="flex-row items-center justify-start hover:animate-none sm:hidden flex ">
             <TextGenerateEffect words="Contact Me"/>
             <IconArrowBadgeRight size={50} color="white" className="hover:animate-bounce"/>
           </a>
