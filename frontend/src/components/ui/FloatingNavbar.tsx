@@ -1,7 +1,6 @@
 import { useState } from "react";
 import {
   motion,
-  AnimatePresence,
   useScroll,
   useMotionValueEvent,
 } from "framer-motion";

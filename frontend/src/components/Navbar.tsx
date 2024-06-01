@@ -1,16 +1,16 @@
 // import React from 'react'
 
-import { FloatingNav } from "./ui/FloatingNavbar";
+// import { FloatingNav } from "./ui/FloatingNavbar";
 
 // import Home from "./Home"
 
 const Navbar = () => {
-  const navItems = [
-    { name: "Home", link: "/" },
-    { name: "About", link: "/about" },
-    { name: "Projects", link: "/projects" },
-    { name: "Contact", link: "/contact" },
-  ];
+  // const navItems = [
+  //   { name: "Home", link: "/" },
+  //   { name: "About", link: "/about" },
+  //   { name: "Projects", link: "/projects" },
+  //   { name: "Contact", link: "/contact" },
+  // ];
   return (<></>
     // <div className="h-14 border-gray-200 border-2 justify-center pr-4 flex-col rounded-full  z-50">
     //   <FloatingNav navItems={navItems} className="" />
