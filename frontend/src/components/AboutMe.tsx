@@ -5,15 +5,15 @@ import { Icon3dCubeSphere,  IconBrandDjango,  IconBrandFirebase,  IconBrandFlutt
 import { TracingBeam } from './ui/tracing-beam';
 import { twMerge } from 'tailwind-merge';
 import { TypewriterEffectSmooth } from './ui/typewriter';
-import { HomeIcon, Menu, Phone, ShoppingBagIcon, User2 } from 'lucide-react';
-import { useNavigate } from "react-router-dom";
+// import { HomeIcon, Menu, Phone, ShoppingBagIcon, User2 } from 'lucide-react';
+// import { useNavigate } from "react-router-dom";
 import { AuroraBackground } from "./ui/aurora-background";
 import { FloatingNav } from "./ui/FloatingNavbar";
 // import { BackgroundGradientAnimation } from './ui/background-gradient-animation';
 
 const AboutMe = () => {
-  const navigate=useNavigate();
-  const [showDiv,setShowDiv]=useState(false);
+  // const navigate=useNavigate();
+  // const [showDiv,setShowDiv]=useState(false);
   const [col1,setCol1]=useState('yellow');
   const [col2,setCol2]=useState('yellow');
   const [col3,setCol3]=useState('yellow');
@@ -51,16 +51,16 @@ const AboutMe = () => {
       }
     };
     
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setShowDiv(false);
-      }
-    };
-    window.addEventListener("keydown", handleKeyDown);
+    // const handleKeyDown = (event: KeyboardEvent) => {
+    //   if (event.key === "Escape") {
+    //     setShowDiv(false);
+    //   }
+    // };
+    // window.addEventListener("keydown", handleKeyDown);
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener("keydown", handleKeyDown);
+      // window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
 
@@ -85,25 +85,25 @@ const AboutMe = () => {
   ];
   const navItems = [
     { name: "Home", link: "/" },
-    { name: "About", link: "/about" },
     { name: "Projects", link: "/projects" },
+    { name: "Experience", link: "/" },
     { name: "Contact", link: "/contact" },
   ];
   return (
     <div className='overflow-x-hidden'>
       <FloatingNav navItems={navItems} className="z-20" />
-      <motion.div
+      {/* <motion.div
         initial={{rotateZ:0}}
         animate={{rotateZ:showDiv ? 90 : 0}}
         transition={{duration:0.1}}
       className='h-10 w-10 bg-sky-400 flex flex-row fixed top-6 left-3 items-center justify-center rounded z-20'>
         <Menu className='bg-[#ededf4] p-[2px] border-zinc-900 rounded h-7 w-7 cursor-pointer z-10' onClick={()=>{setShowDiv(!showDiv)}}/>
-      </motion.div>
+      </motion.div> */}
      <div className='bg-black h-full w-full flex flex-col items-center justify-center overflow-y-hidden'>
-        <h1 className="mx-auto max-w-5xl px-8 pb-8 pt-12 text-2xl font-bold text-white md:pt-12 md:text-5xl items-start">
+        <TracingBeam className="px-6 my-10 h-full mt-28 pt-10">
+        <h1 className="mx-auto max-w-5xl px-8 pb-8 text-2xl font-bold text-white md:text-5xl items-start">
             About Me
         </h1>
-        <TracingBeam className="px-6 my-10 h-full pt-10">
           <TypewriterEffectSmooth words={words} className='pl-10'/>
           <motion.div
           initial={{ opacity: 0 }}
@@ -214,7 +214,7 @@ const AboutMe = () => {
         </div>
       </TracingBeam>
       </div>
-    <motion.div className='w-10 rounded-b z-10 top-[50px] left-3 fixed flex flex-col bg-sky-400 pt-2 items-center justify-evenly' 
+    {/* <motion.div className='w-10 rounded-b z-10 top-[50px] left-3 fixed flex flex-col bg-sky-400 pt-2 items-center justify-evenly' 
     initial={{ height: 0 }}
     animate={{ height: showDiv ? screen.height*2/6 : 0}}
     transition={{ duration: 0.1}}
@@ -223,7 +223,7 @@ const AboutMe = () => {
       <ShoppingBagIcon className=' cursor-pointer hover:bg-[#D6D6D6] rounded p-1 bg-[#ededf4] h-8 w-8' style={{display:showDiv?'block':'contents'}} onClick={()=>{navigate('/projects')}}/>
       <User2 className=' cursor-pointer hover:bg-emerald-400 rounded p-1 bg-emerald-300 h-8 w-8' style={{display:showDiv?'block':'contents'}} onClick={()=>{navigate('/about')}}/>
       <Phone className=' cursor-pointer hover:bg-[#D6D6D6] rounded p-1 bg-[#ededf4] h-8 w-8' style={{display:showDiv?'block':'contents'}} onClick={()=>{navigate('/contact')}}/>
-    </motion.div>
+    </motion.div> */}
     </div>
   )
 }
