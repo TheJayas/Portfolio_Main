@@ -1,4 +1,3 @@
-"use client";
 import { cn } from "../../lib/util/cn";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import React, { useMemo, useRef } from "react";

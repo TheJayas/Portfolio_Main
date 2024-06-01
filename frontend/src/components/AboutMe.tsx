@@ -8,6 +8,7 @@ import { TypewriterEffectSmooth } from './ui/typewriter';
 import { HomeIcon, Menu, Phone, ShoppingBagIcon, User2 } from 'lucide-react';
 import { useNavigate } from "react-router-dom";
 import { AuroraBackground } from "./ui/aurora-background";
+import { FloatingNav } from "./ui/FloatingNavbar";
 // import { BackgroundGradientAnimation } from './ui/background-gradient-animation';
 
 const AboutMe = () => {
@@ -82,8 +83,15 @@ const AboutMe = () => {
       className: "text-blue-500 dark:text-blue-500",
     },
   ];
+  const navItems = [
+    { name: "Home", link: "/" },
+    { name: "About", link: "/about" },
+    { name: "Projects", link: "/projects" },
+    { name: "Contact", link: "/contact" },
+  ];
   return (
     <div className='overflow-x-hidden'>
+      <FloatingNav navItems={navItems} className="z-20" />
       <motion.div
         initial={{rotateZ:0}}
         animate={{rotateZ:showDiv ? 90 : 0}}
