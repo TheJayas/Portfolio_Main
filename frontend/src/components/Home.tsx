@@ -13,12 +13,11 @@ import MagicButton from "./ui/magic-button";
 
 
 const Home = () => {
-  // const navigate=useNavigate();
-  // const [showDiv,setShowDiv]=useState(false);
+
   const navItems = [
     { name: "About", link: "/about" },
     { name: "Projects", link: "/projects" },
-    { name: "Experience", link: "/" },
+    { name: "Experience", link: "/experience" },
     { name: "Contact", link: "/contact" },
   ];
   return (
@@ -88,7 +87,7 @@ const Home = () => {
       </DockIcon>
       </Dock>
       </div>
-      <div className="w-1/2 h-full p-10">
+      <div className="w-1/2 h-full p-10 hidden sm:flex">
         <LampContainer>
         <motion.h1
           initial={{ opacity: 0.5, y: 100 }}

@@ -10,6 +10,7 @@ import ContactMe from "./components/ContactMe"
 // import Navbar from "./components/Navbar"
 import AnimatedCursor from "react-animated-cursor";
 import Layout from "./components/Layout"
+import Experience from "./components/Experience"
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/contact" element={<ContactMe/>} />
         <Route path="/projects" element={<Projects/>} />
         <Route path="/about" element={<AboutMe/>} />
+        <Route path="/experience" element={<Experience/>} />
       </Routes>
    </BrowserRouter>
   )

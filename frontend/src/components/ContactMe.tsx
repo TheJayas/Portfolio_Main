@@ -49,8 +49,8 @@ const ContactMe = () => {
           initial={{rotateZ:0}}
           animate={{rotateZ:showDiv ? 90 : 0}}
           transition={{duration:0.1}}
-        className='h-10 w-10 bg-sky-400 flex flex-row fixed top-6 left-3 items-center justify-center rounded z-20'>
-          <Menu className='bg-[#ededf4] p-[2px] border-zinc-900 rounded h-7 w-7 cursor-pointer z-10' onClick={()=>{setShowDiv(!showDiv)}}/>
+        className='h-10 w-10 bg-fuchsia-900 flex flex-row fixed top-6 left-3 items-center justify-center rounded z-20'>
+          <Menu className='bg-[#9e9eed] p-[2px] border-zinc-900 rounded h-8 w-8 cursor-pointer z-10' onClick={()=>{setShowDiv(!showDiv)}}/>
         </motion.div>
       <div className="h-screen w-full z-10 flex felx-col container bg-grey-200 items-center justify-center overflow-y-scroll">
         <Card className="mx-auto max-w-[500px] z-40 border-2 border-zinc-400 rounded-3xl px-16 flex flex-col justify-center h-[30rem] max-h-screen bg-black bg-opacity-50 py-10 overflow-x-hidden overflow-y-hidden">
@@ -135,7 +135,7 @@ const ContactMe = () => {
             </CardContent>
             </Card>
           </div>
-        <motion.div className='w-10 rounded-b z-10 top-[50px] left-3 fixed flex flex-col bg-sky-400 pt-2 items-center justify-evenly' 
+        <motion.div className='w-10 rounded-b z-10 top-[50px] left-3 fixed flex flex-col bg-fuchsia-900 pt-2 items-center justify-evenly' 
             initial={{ height: 0 }}
             animate={{ height: showDiv ? screen.height*2/6 : 0}}
             transition={{ duration: 0.1}}
@@ -143,7 +143,7 @@ const ContactMe = () => {
             <HomeIcon className=' cursor-pointer hover:bg-[#D6D6D6] rounded p-1 bg-[#ededf4] h-8 w-8' style={{display:showDiv?'block':'contents'}} onClick={()=>{navigate('/')}}/>
             <ShoppingBagIcon className=' cursor-pointer hover:bg-[#D6D6D6] rounded p-1 bg-[#ededf4] h-8 w-8' style={{display:showDiv?'block':'contents'}} onClick={()=>{navigate('/projects')}}/>
             <User2 className=' cursor-pointer hover:bg-[#D6D6D6] rounded p-1 bg-[#ededf4] h-8 w-8' style={{display:showDiv?'block':'contents'}} onClick={()=>{navigate('/about')}}/>
-            <Phone className=' cursor-pointer hover:bg-emerald-400 rounded p-1 bg-emerald-300 h-8 w-8' style={{display:showDiv?'block':'contents'}} onClick={()=>{navigate('/contact')}}/>
+            <Phone className=' cursor-pointer hover:bg-blue-500 rounded p-1 bg-blue-400 h-8 w-8' style={{display:showDiv?'block':'contents'}} onClick={()=>{navigate('/contact')}}/>
         </motion.div>
      </Vortex>
   )
